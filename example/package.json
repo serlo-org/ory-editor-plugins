@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "ory-editor": "^0.2.24",
+    "ory-editor-renderer": "^0.2.24",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0",
+    "react-scripts": "1.0.17",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
