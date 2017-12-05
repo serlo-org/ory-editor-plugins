@@ -2,8 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 
 // You are obviously not limited to material-ui, but we really enjoy
-// the material-ui svg icons!
-//import CropSquare from 'material-ui/svg-icons/image/crop-square'
+// the material-ui icons!
 import InfoIcon from 'material-ui-icons/Info';
 
 const InfoboxPlugin = ({ children }) => React.createElement(
@@ -16,8 +15,8 @@ export default (({ defaultPlugin }) => ({
     Component: InfoboxPlugin,
     IconComponent: React.createElement(InfoIcon, null),
     name: 'example/layout/infobox',
-    version: '0.0.1',
-    text: 'A proper infobox',
+    version: '1.0.0',
+    text: 'Infobox',
 
     createInitialChildren: () => ({
         id: uuid(),
