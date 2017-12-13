@@ -2,7 +2,8 @@
 	"private": true,
 	"workspaces": [
 		"example",
-		"plugins/layout/*"
+		"plugins/layout/*",
+		"plugins/content/*"
 	],
 	"devDependencies": {
 		"babel-cli": "^6.26.0",

@@ -1,5 +1,5 @@
 {
-  "name": "ory-editor-plugins-infobox",
+  "name": "template:ory-editor-plugins-...",
   "version": "0.0.0",
   "main": "./lib/index.js",
   "scripts": {
@@ -12,23 +12,10 @@
     "prebuild": "npm run clean",
     "clean": "rimraf \"lib/*\""
   },
-  "engines": {
-    "node": ">=6.0.0",
-    "npm": "~3.8.0"
-  },
-  "author": "@schul-cloud",
-  "contributors": [
-    "@Blubl",
-    "@FWirtz"
-  ],
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
-  "dependencies": {
-    "material-ui": "^0.16.7",
-    "material-ui-icons": "^1.0.0-beta.17",
-    "uuid": "^3.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
