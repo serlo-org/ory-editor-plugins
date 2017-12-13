@@ -1,12 +1,42 @@
 {
 	"private": true,
 	"workspaces": [
-		"example"
+		"example",
+		"plugins/layout/*"
 	],
 	"devDependencies": {
-		"lerna": "^2.5.1"
+		"babel-cli": "^6.26.0",
+		"babel-eslint": "^8.0.2",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-preset-stage-2": "^6.24.1",
+		"chokidar-cli": "^1.2.0",
+		"eslint": "^4.11.0",
+		"eslint-config-react-app": "^2.0.1",
+		"eslint-plugin-flowtype": "^2.39.1",
+		"eslint-plugin-import": "^2.8.0",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"eslint-plugin-react": "^7.5.1",
+		"flow-bin": "^0.59.0",
+		"flow-typed": "^2.2.3",
+		"lerna": "^2.5.1",
+		"lint-staged": "^5.0.0",
+		"npm-run-all": "^4.1.2",
+		"postcss-cli": "^4.1.1",
+		"postcss-cssnext": "^3.0.2",
+		"postcss-import": "^11.0.0",
+		"postcss-nested": "^2.1.2",
+		"prettier": "^1.8.2",
+		"react": "^15.6.0",
+		"react-dom": "^15.6.0",
+		"react-scripts": "^0.9.5",
+		"rimraf": "^2.6.2"
 	},
 	"scripts": {
-		"start" : "lerna run start"
+		"build": "lerna run --parallel build",
+		"build:watch": "lerna run --parallel build:watch",
+		"start": "npm-run-all -p build:watch start:example",
+		"start:example": "lerna run --scope example start",
+		"prettier": "prettier --single-quote --parser flow --no-semi --write \"packages/*/*/src/**/*.js\" \"example/src/**/*.js\""
 	}
 }

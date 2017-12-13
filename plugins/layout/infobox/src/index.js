@@ -14,7 +14,7 @@ const InfoboxPlugin = ({ children }) => (
 export default ({ defaultPlugin }) => ({
     Component: InfoboxPlugin,
     IconComponent: <InfoIcon />,
-    name: 'example/layout/infobox',
+    name: 'schul-cloud/layout/infobox',
     version: '1.0.0',
     text: 'Infobox',
 
