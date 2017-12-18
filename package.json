@@ -38,6 +38,6 @@
 		"build:watch": "lerna run --parallel build:watch",
 		"start": "npm-run-all -p build:watch start:example",
 		"start:example": "lerna run --scope example start",
-		"prettier": "prettier --single-quote --parser flow --no-semi --write \"packages/*/*/src/**/*.js\" \"example/src/**/*.js\""
+		"format": "prettier --single-quote --parser flow --no-semi --write \"plugins/*/*/src/**/*.js\" \"example/src/**/*.js\""
 	}
 }

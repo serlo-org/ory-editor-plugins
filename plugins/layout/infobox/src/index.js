@@ -6,26 +6,31 @@ import uuid from 'uuid'
 import InfoIcon from 'material-ui-icons/Info'
 
 const InfoboxPlugin = ({ children }) => (
-    <div className="ory-editor-plugins-infobox">
-        { children }
-    </div>
+  <div className="ory-editor-plugins-infobox">{children}</div>
 )
 
 export default ({ defaultPlugin }) => ({
-    Component: InfoboxPlugin,
-    IconComponent: <InfoIcon />,
-    name: 'schul-cloud/layout/infobox',
-    version: '1.0.0',
-    text: 'Infobox',
+  Component: InfoboxPlugin,
+  IconComponent: <InfoIcon />,
+  name: 'schul-cloud/layout/infobox',
+  version: '1.0.0',
+  text: 'Infobox',
 
-    createInitialChildren: () => ({
+  createInitialChildren: () => ({
+    id: uuid(),
+    rows: [
+      {
         id: uuid(),
-        rows: [{
-            id: uuid(),
-            cells: [{
-            content: { plugin: defaultPlugin, state: defaultPlugin.createInitialState() },
-            id: uuid(),
-            }]
-        }]
-    })
+        cells: [
+          {
+            content: {
+              plugin: defaultPlugin,
+              state: defaultPlugin.createInitialState()
+            },
+            id: uuid()
+          }
+        ]
+      }
+    ]
+  })
 })

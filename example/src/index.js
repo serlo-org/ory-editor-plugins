@@ -1,5 +1,5 @@
-import React  from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import 'font-awesome/css/font-awesome.css'
 
@@ -20,7 +20,7 @@ import 'ory-editor-plugins-slate/lib/index.css' // Stylesheets for the rich text
 import KatexPlugin from 'ory-editor-slate-katex'
 import 'ory-editor-slate-katex/lib/index.css'
 
-import {P} from 'ory-editor-plugins-slate/lib/plugins/paragraph'
+import { P } from 'ory-editor-plugins-slate/lib/plugins/paragraph'
 
 import spacer from 'ory-editor-plugins-spacer'
 import 'ory-editor-plugins-spacer/lib/index.css'
@@ -34,51 +34,40 @@ import image from 'ory-editor-plugins-image'
 import 'ory-editor-plugins-image/lib/index.css'
 import video from 'ory-editor-plugins-video'
 import 'ory-editor-plugins-video/lib/index.css'
-import content from './content';
+import content from './content'
 
 require('react-tap-event-plugin')() // react-tap-event-plugin is required by material-ui which is used by ory-editor-ui so we need to call it here
 
-const slate = slateFactory([...defaultSlatePlugins, new KatexPlugin({P})])
+const slate = slateFactory([...defaultSlatePlugins, new KatexPlugin({ P })])
 // Define which plugins we want to use. We only have slate and parallax available, so load those.
 const plugins = {
-  content: [slate,
-    spacer,
-    image,
-    video,
-    divider,
-    geogebra
-  ], // Define plugins for content cells
+  content: [slate, spacer, image, video, divider, geogebra], // Define plugins for content cells
   layout: [infobox({ defaultPlugin: slate })]
 }
-
 
 // Instantiate the editor
 const editor = new Editor({
   plugins,
   // pass the content state - you can add multiple editables here
-  editables: [content],
+  editables: [content]
 })
-
 
 const elements = document.querySelectorAll('.editable')
 
 for (const element of elements) {
   ReactDOM.render(
-    (<div>
-        <Editable
-          editor={editor}
-          id={content.id}
-        />
-      </div>
-    ),
+    <div>
+      <Editable editor={editor} id={content.id} />
+    </div>,
     element
-  );
+  )
 }
 
-ReactDOM.render((
+ReactDOM.render(
   <div>
-    <Trash editor={editor}/>
-    <DisplayModeToggle editor={editor}/>
-    <Toolbar editor={editor}/>
-  </div>
-), document.getElementById('controls'))
+    <Trash editor={editor} />
+    <DisplayModeToggle editor={editor} />
+    <Toolbar editor={editor} />
+  </div>,
+  document.getElementById('controls')
+)

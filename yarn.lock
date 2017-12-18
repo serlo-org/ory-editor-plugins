@@ -6795,7 +6795,7 @@ original@>=0.0.5:
   dependencies:
     url-parse "1.0.x"
 
-ory-editor-core@^0.2.25, ory-editor-core@^v0.2.25, ory-editor-core@v0.2.25:
+ory-editor-core@^v0.2.25, ory-editor-core@v0.2.25:
   version "0.2.25"
   resolved "https://registry.yarnpkg.com/ory-editor-core/-/ory-editor-core-0.2.25.tgz#dbf4e18fae5cfee110c9b9f1c420be1f919d8632"
   dependencies:
