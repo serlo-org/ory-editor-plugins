@@ -12,9 +12,15 @@ import { Trash, DisplayModeToggle, Toolbar } from 'ory-editor-ui'
 import 'ory-editor-ui/lib/index.css'
 
 // Load some exemplary plugins:
-import slate from 'ory-editor-plugins-slate' // The rich text area plugin
+import slateFactory from 'ory-editor-plugins-slate' // The rich text area plugin
+import { defaultPlugins as defaultSlatePlugins } from 'ory-editor-plugins-slate/lib/hooks'
 
 import 'ory-editor-plugins-slate/lib/index.css' // Stylesheets for the rich text area plugin
+
+import KatexPlugin from 'ory-editor-slate-katex'
+import 'ory-editor-slate-katex/lib/index.css'
+
+import {P} from 'ory-editor-plugins-slate/lib/plugins/paragraph'
 
 import spacer from 'ory-editor-plugins-spacer'
 import 'ory-editor-plugins-spacer/lib/index.css'
@@ -30,16 +36,16 @@ import content from './content';
 
 require('react-tap-event-plugin')() // react-tap-event-plugin is required by material-ui which is used by ory-editor-ui so we need to call it here
 
-
+const slate = slateFactory([...defaultSlatePlugins, new KatexPlugin({P})])
 // Define which plugins we want to use. We only have slate and parallax available, so load those.
 const plugins = {
-  content: [slate(),
+  content: [slate,
     spacer,
     image,
     video,
     divider
   ], // Define plugins for content cells
-  layout: [infobox({ defaultPlugin: slate() })]
+  layout: [infobox({ defaultPlugin: slate })]
 }
 
 

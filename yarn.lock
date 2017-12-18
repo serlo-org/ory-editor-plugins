@@ -5669,6 +5669,12 @@ jsx-ast-utils@^2.0.0:
   dependencies:
     array-includes "^3.0.3"
 
+katex@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.8.3.tgz#909d99864baf964c3ccae39c4a99a8e0fb9a1bd0"
+  dependencies:
+    match-at "^0.1.0"
+
 keycode@^2.1.1, keycode@^2.1.2, keycode@^2.1.8:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/keycode/-/keycode-2.1.9.tgz#964a23c54e4889405b4861a5c9f0480d45141dfa"
@@ -5986,6 +5992,10 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+
 lodash.defaults@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
@@ -6147,6 +6157,10 @@ marked-terminal@^1.6.2:
 marked@^0.3.6:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.7.tgz#80ef3bbf1bd00d1c9cfebe42ba1b8c85da258d0d"
+
+match-at@^0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/match-at/-/match-at-0.1.1.tgz#25d040d291777704d5e6556bbb79230ec2de0540"
 
 "match-stream@>= 0.0.2 < 1":
   version "0.0.2"
@@ -6819,7 +6833,7 @@ ory-editor-plugins-parallax-background@v0.2.25:
     ory-editor-core "^v0.2.25"
     ory-editor-ui "^v0.2.25"
 
-ory-editor-plugins-slate@v0.2.25:
+ory-editor-plugins-slate@^0.2.24, ory-editor-plugins-slate@v0.2.25:
   version "0.2.25"
   resolved "https://registry.yarnpkg.com/ory-editor-plugins-slate/-/ory-editor-plugins-slate-0.2.25.tgz#f242c37878b684246be3b2cb173057f341830f5c"
   dependencies:
@@ -8166,6 +8180,10 @@ react-hotkeys@^0.10.0:
     lodash "^4.13.1"
     mousetrap "^1.5.2"
     prop-types "^15.5.8"
+
+react-katex@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-katex/-/react-katex-1.2.0.tgz#bdbdbd98856ebc1448b607487d9385b7dca06907"
 
 react-player@^0.22.0:
   version "0.22.0"
