@@ -7,6 +7,7 @@
     "ory-editor": "^0.2.24",
     "ory-editor-plugins-infobox": "0.0.0",
     "ory-editor-plugins-geogebra": "0.0.0",
+    "ory-editor-plugins-highlight": "0.0.0",
     "ory-editor-renderer": "^0.2.24",
     "react": "^15.6.0",
     "react-dom": "^15.6.0",
