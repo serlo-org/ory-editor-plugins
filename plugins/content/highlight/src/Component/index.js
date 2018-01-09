@@ -8,25 +8,30 @@ class Highlight extends Component {
         super(props);
 
         this.state = {
-            text: "var test = true //nice"
+            text: "Switch into the edit mode to change this text.",
+            language: "text"
         }
     }
 
-    setText(text) {
+    setText(text, language) {
         this.setState({
             text,
+            language
         });
     }
 
     render() {
-        const { text } = this.state;
+        const { text, language } = this.state;
         const { readOnly } = this.props;
 
         return (
             <div>
                 { readOnly 
-                    ? <SyntaxHighlight language="javascript" style={light}>{text}</SyntaxHighlight>
-                    : <Input saveText={(val) => this.setText(val)}/> }
+                    ? (<SyntaxHighlight language={language}
+                                        style={light}>
+                                        {text}
+                      </SyntaxHighlight>)
+                    : <Input saveParams={(text, language) => this.setText(text, language)}/> }
             </div>
         );
     }
