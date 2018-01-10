@@ -26,14 +26,15 @@ class Input extends Component {
                 marginRight: '5px'
             }
         }
+        const { text } = this.props
 
         return (
             <form onSubmit={(evt) => this.passText(evt)}>
                 <div>
                     <textarea 
                         style={style.textarea}
-                        ref={(text) => this.text = text}
-                        placeholder="Paste your sourcecode here...">
+                        ref={(text) => this.text = text}>
+                        {text}
                     </textarea>
                 </div>
                 <input type="text" 

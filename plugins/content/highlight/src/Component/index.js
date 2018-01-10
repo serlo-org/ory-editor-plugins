@@ -8,7 +8,7 @@ class Highlight extends Component {
         super(props);
 
         this.state = {
-            text: "Switch into the edit mode to change this text.",
+            text: "Switch into edit mode then paste your sourcecode here...",
             language: "text"
         }
     }
@@ -31,7 +31,8 @@ class Highlight extends Component {
                                         style={light}>
                                         {text}
                       </SyntaxHighlight>)
-                    : <Input saveParams={(text, language) => this.setText(text, language)}/> }
+                    : <Input saveParams={(text, language) => this.setText(text, language)}
+                             text={text}/> }
             </div>
         );
     }
