@@ -9,16 +9,18 @@ class Highlight extends Component {
 
         this.state = {
             text: "Switch into edit mode then paste your sourcecode here...",
-            language: "text",
-            lineNumbers: false
+            language: "",
+            lineNumbers: false,
         }
     }
 
-    setText(text, language, lineNumbers) {
+    handleValueChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+        
         this.setState({
-            text,
-            language,
-            lineNumbers
+            [name]: value
         });
     }
 
@@ -29,13 +31,15 @@ class Highlight extends Component {
         return (
             <div>
                 { readOnly 
-                    ? (<SyntaxHighlight language={language}
+                    ? (<SyntaxHighlight language={language || "text"}
                                         showLineNumbers={lineNumbers}
                                         style={light}>
                                         {text}
                       </SyntaxHighlight>)
-                    : <Input saveParams={(text, language, lineNumbers) => this.setText(text, language, lineNumbers)}
-                             text={text}/> }
+                    : <Input handleValueChange={this.handleValueChange.bind(this)}
+                             text={text}
+                             language={language}
+                             lineNumbers={lineNumbers}/> }
             </div>
         );
     }

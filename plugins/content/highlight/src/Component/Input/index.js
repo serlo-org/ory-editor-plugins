@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 
 class Input extends Component {
-    passText(evt) {
-        evt.preventDefault();
-
-        this.props.saveParams(this.text.value, this.language.value, this.lineNumbers);
-    }
-
     render() {
         const style = {
             textarea: {
@@ -26,33 +20,36 @@ class Input extends Component {
                 marginRight: '5px'
             },
         }
-        const { text } = this.props
+        const { text, language, lineNumbers, handleValueChange } = this.props
 
         return (
-            <form onSubmit={(evt) => this.passText(evt)}>
+            <form>
                 <div>
-                    <textarea 
-                        style={style.textarea}
-                        ref={(text) => this.text = text}>
+                    <textarea value={text}
+                              name="text"
+                              onChange={handleValueChange}
+                              style={style.textarea}>
                         {text}
                     </textarea>
                 </div>
                 <span style={{marginRight: '15px'}}>
-                    <input type="text" 
-                        placeholder="Language"
-                        style={style.spaceRight}
-                        ref={(language) => this.language = language}/>
+                    <input type="text"
+                           value={language}
+                           name="language"
+                           onChange={handleValueChange}
+                           placeholder="Language"
+                           style={style.spaceRight}/>
                     <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD" target="_blank">Available languages</a>
                 </span>
                 <span>
                     <input id="lineNumbers"
                            type="checkbox"
-                           style={style.spaceRight}
-                           ref="lineNumbers"
-                           onChange={(event) => {this.lineNumbers = event.target.checked}}/>
+                           checked={lineNumbers}
+                           name="lineNumbers"
+                           onChange={handleValueChange}
+                           style={style.spaceRight}/>
                     <label for="lineNumbers" style={{fontWeight: 'normal'}}>Show line numbers</label>
                 </span>
-                <button style={style.submit}>Save</button>
             </form>
         );
     }
