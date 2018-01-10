@@ -9,29 +9,32 @@ class Highlight extends Component {
 
         this.state = {
             text: "Switch into edit mode then paste your sourcecode here...",
-            language: "text"
+            language: "text",
+            lineNumbers: false
         }
     }
 
-    setText(text, language) {
+    setText(text, language, lineNumbers) {
         this.setState({
             text,
-            language
+            language,
+            lineNumbers
         });
     }
 
     render() {
-        const { text, language } = this.state;
+        const { text, language, lineNumbers } = this.state;
         const { readOnly } = this.props;
 
         return (
             <div>
                 { readOnly 
                     ? (<SyntaxHighlight language={language}
+                                        showLineNumbers={lineNumbers}
                                         style={light}>
                                         {text}
                       </SyntaxHighlight>)
-                    : <Input saveParams={(text, language) => this.setText(text, language)}
+                    : <Input saveParams={(text, language, lineNumbers) => this.setText(text, language, lineNumbers)}
                              text={text}/> }
             </div>
         );

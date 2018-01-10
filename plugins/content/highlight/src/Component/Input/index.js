@@ -4,7 +4,7 @@ class Input extends Component {
     passText(evt) {
         evt.preventDefault();
 
-        this.props.saveParams(this.text.value, this.language.value);
+        this.props.saveParams(this.text.value, this.language.value, this.lineNumbers);
     }
 
     render() {
@@ -22,9 +22,9 @@ class Input extends Component {
                 borderColor: '#83a617',
                 color: 'white'
             },
-            language: {
+            spaceRight: {
                 marginRight: '5px'
-            }
+            },
         }
         const { text } = this.props
 
@@ -37,11 +37,21 @@ class Input extends Component {
                         {text}
                     </textarea>
                 </div>
-                <input type="text" 
-                       placeholder="Language"
-                       style={style.language}
-                       ref={(language) => this.language = language}/>
-                <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD" target="_blank">Available languages</a>
+                <span style={{marginRight: '15px'}}>
+                    <input type="text" 
+                        placeholder="Language"
+                        style={style.spaceRight}
+                        ref={(language) => this.language = language}/>
+                    <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD" target="_blank">Available languages</a>
+                </span>
+                <span>
+                    <input id="lineNumbers"
+                           type="checkbox"
+                           style={style.spaceRight}
+                           ref="lineNumbers"
+                           onChange={(event) => {this.lineNumbers = event.target.checked}}/>
+                    <label for="lineNumbers" style={{fontWeight: 'normal'}}>Show line numbers</label>
+                </span>
                 <button style={style.submit}>Save</button>
             </form>
         );
