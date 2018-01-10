@@ -12,7 +12,8 @@ class Input extends Component {
             textarea: {
                 height: '250px',
                 width: '100%',
-                padding: '5px'
+                padding: '5px',
+                fontFamily: 'Menlo, Monaco, "Courier New", monospace'
             },
             submit: {
                 position: 'absolute',
