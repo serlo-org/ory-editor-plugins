@@ -34,6 +34,29 @@ yarn start
 It will build the scripts in watch mode, and automatically reload the page on file changes.
 
 ## FAQ
+### Where can I learn more about creating Ory plugins?
+There is a great tutorial provided in the [User guide on gitbook](https://ory.gitbooks.io/editor/content/tutorials.html#reactjs-example).
+### How should I persist changes?
+All plugins receive `this.props.state` and `this.props.onChange(...)`. You should get all values using the `state` supplied via `props` and persist all attributes needed using the mentioned `onChange(...)`.
+#### Example
+```
+handleValueChange(event) {
+    const target = event.target
+    //in case the event is fired by a checkbox we need to deal with it differently
+    const value = target.type === 'checkbox' ? target.checked : target.value
+    const name = target.name
+
+    this.props.onChange({
+        [name]: value
+    })
+}
+```
+Notice the ES6 shorthand here.
+You can then use the saved values like this:
+```
+const { state } = this.props
+const foo = state.foo || 'default value'
+```
 ### What does Lerna do?
 Lerna is a tool to manage multiple packages in one repository. (In our case the multiple packages are yarn workspaces defined in the `package.json`). We want to be able to import every plugin on its own, so we need a tool which links the different packages together.
 This is where Lerna comes into play. It automatically resolves local packages in the dependencies and and links them correctly, so they can be imported and handled like any published npm package (e.g without knowledge about the file structure).
