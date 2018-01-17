@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 
 class Input extends Component {
     render() {
@@ -51,8 +51,8 @@ class Input extends Component {
                     <label for="lineNumbers" style={{fontWeight: 'normal'}}>Show line numbers</label>
                 </span>
             </form>
-        );
+        )
     }
 }
 
-export default Input;
+export default Input
