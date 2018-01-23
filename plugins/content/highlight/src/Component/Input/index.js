@@ -9,13 +9,6 @@ class Input extends Component {
                 padding: '5px',
                 fontFamily: 'Menlo, Monaco, "Courier New", monospace'
             },
-            submit: {
-                position: 'absolute',
-                right: '0',
-                backgroundColor: '#95bc1a',
-                borderColor: '#83a617',
-                color: 'white'
-            },
             spaceRight: {
                 marginRight: '5px'
             },
