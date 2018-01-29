@@ -14,7 +14,7 @@ import type { Props } from 'ory-editor-plugins-slate/lib/plugins/props'
 import Portal from 'react-portal'
 import { darkBlack } from 'material-ui/styles/colors'
 
-export const A = 'LINK/LINK'
+export const A = 'NEWLINK/NEWLINK'
 
 class Button extends Component {
 	state = {
@@ -73,11 +73,11 @@ class Button extends Component {
 			else{
 				const newState = this.props.editorState
 					.transform()
-					.insertText(' ')
+					.insertText('')
 					.extend(-1)
 					.wrapInline({
 						type: A,
-						data: { href: ' ' }
+						data: { href: '' }
 					})
 					.collapseToEnd()
 					.focus()

@@ -17,12 +17,49 @@ class Link extends React.Component {
 
 	onHrefChange = e => {
 		this.setState({ href: e.target.value })
+		this.renderHref(e.target.value)
 	}
 
 	onTitleChange = e => {
 		this.setState({ title: e.target.value })
+		this.renderTitle(e.target.value)
 	}
 
+	renderHref = newHref => {
+		const{ editor, node } = this.props
+		const { key } = node
+
+		const next = editor
+			.getState()
+			.transform()
+			.setNodeByKey(key, {
+				data: {
+					href: newHref,
+				}
+			})	
+			.apply()
+
+		editor.onChange(next)
+	}
+
+	renderTitle = newTitle => {
+		const{ editor, node } = this.props
+		const { key } = node
+
+		const next = editor
+			.getState()
+			.transform()
+			.setNodeByKey(key, {
+				data: {
+					title: newTitle,
+					inline: this.state.inline
+				}
+			})	
+			.apply()
+
+		editor.onChange(next)
+	}
+	
 	handleOpen = portal => {
 		const textfield = portal.firstChild
 		const { top } = position()
@@ -52,16 +89,26 @@ class Link extends React.Component {
 							}}>        
 							<div>
 								<TextField
+									floatingLabelText="Link Title"
 									hintText="Link title"
-									onChange={this.onTitleChange}
+									inputStyle={{color: 'white'}}
+									floatingLabelStyle={{color: 'white'}}
+									hintStyle={{ color: 'grey' }}
+									style={{ width: '600px'}}
 									value={this.state.title}
+									onChange={this.onTitleChange}
 								/>
 							</div>
 							<div >          
 								<TextField
+									floatingLabelText="URL"
 									hintText="http://example.com/my/link.html"
-									onChange={this.onHrefChange}
+									inputStyle={{color: 'white'}}
+									floatingLabelStyle={{color: 'white'}}
+									hintStyle={{ color: 'grey' }}
+									style={{ width: '600px'}}
 									value={this.state.href}
+									onChange={this.onHrefChange}
 								/>
 							</div>
 						</div>
