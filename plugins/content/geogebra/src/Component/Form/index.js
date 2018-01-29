@@ -4,14 +4,14 @@ import Display from '../Display'
 import TextField from 'material-ui/TextField'
 import { BottomToolbar } from 'ory-editor-ui'
 
-const handleChange = (onChange) => e => {
+const handleChange = onChange => e => {
   const target = e.target
   if (target instanceof HTMLInputElement) {
     onChange({ src: target.value })
   }
 }
 
-const Form = (props) => (
+const Form = props => (
   <div>
     <Display {...props} />
     <BottomToolbar open={props.focused}>
