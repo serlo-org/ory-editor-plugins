@@ -5,6 +5,7 @@ import {darkBlack} from 'material-ui/styles/colors'
 import TextField from 'material-ui/TextField'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import position from 'selection-position'
 
 class Link extends React.Component {
 	state = {
@@ -27,8 +28,7 @@ class Link extends React.Component {
 		const { top } = position()
 		textfield.style.opacity= 1
 		textfield.style.top = `${top + window.scrollY - textfield.offsetHeight}px`
-		textfield.style.left= `${document.body.clientWidth / 2 -
-		textfield. offset Width / 2} px`
+		textfield.style.left = `${document.body.clientWidth / 2 - textfield.offsetWidth / 2}px`
 	}
 	
 	render(){
@@ -39,19 +39,18 @@ class Link extends React.Component {
 
 		return (
 			<span {...attributes} >
-				<Portal isOpened={hasLinks} onOpen{this.handleOpen}>    
-					<MuiThemeProvider muitheme={getMuiTheme()}>
-						<div>        
-							<div       
-								className="ory-prevent-blur ory-plugins-slate-inline-toolbar"
-								style={{ 
-									display: 'inline-block',        
-									border: `${darkBlack} 1px solid`,
-									borderRadius: '4px 4px 0',      
-									backgroundColor: darkBlack,     
-									padding: '0 12px'               
-								}}       
-							>
+				<Portal isOpened={hasLinks} onOpen={this.handleOpen}>    
+					<MuiThemeProvider muiTheme={getMuiTheme()}>
+						<div 
+							className="ory-prevent-blur ory-plugins-content-slate-inline-toolbar"
+							style={{ 
+								display: 'inline-block',        
+								border: `${darkBlack} 1px solid`,
+								borderRadius: '4px 4px 0',      
+								backgroundColor: darkBlack,     
+								padding: '0 12px'               
+							}}>        
+							<div>
 								<TextField
 									hintText="Link title"
 									onChange={this.onTitleChange}

@@ -16,6 +16,9 @@
 		"react": "^15.4.2",
 		"react-dom": "^15.4.2"
 	},
-	"dependencies": {"react-portal": "3.1.0"},
+	"dependencies": {
+		"react-portal": "3.1.0",
+		"selection-position": "^1.0.0"
+	},
 	"devDependencies": {}
 }
