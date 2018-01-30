@@ -40,8 +40,6 @@ class Button extends Component {
 		}
 
 	onClick = e => {
-		console.log("newLink click")
-
 		e.preventDefault()
 
 		const { editorState, onChange } = this.props
@@ -73,7 +71,7 @@ class Button extends Component {
 			else{
 				const newState = this.props.editorState
 					.transform()
-					.insertText('')
+					.insertText(' ')
 					.extend(-1)
 					.wrapInline({
 						type: A,
