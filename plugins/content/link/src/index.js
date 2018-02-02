@@ -53,39 +53,45 @@ class Button extends Component {
 				.transform()
 				.unwrapInline(A)
 				.apply()
+
 			onChange(newState)
 		} 
-		else {
-			if (editorState.isExpanded){
-				const newState = this.props.editorState
-					.transform()
-					.wrapInline({
-						type: A, 
-						data: { href: ' '}
-					})
-					.collapseToEnd()
-					.focus()
-					.apply()
-				this.props.onChange(newState)
-			}
-			else{
-				const newState = this.props.editorState
-					.transform()
-					.insertText(' ')
-					.extend(-1)
-					.wrapInline({
-						type: A,
-						data: { href: '' }
-					})
-					.collapseToEnd()
-					.focus()
-					.apply()
+		else if(editorState.isExpanded){
+			const newState = this.props.editorState
+				.transform()
+				.wrapInline({
+					type: A, 
+					data: {
+						href: ' ',
+						isPortal: true
+					}
+				})
+				.collapseToEnd()
+				.focus()
+				.apply()
 
-				this.props.onChange(newState)
+			this.props.onChange(newState)
+		}
+		else{
+			const newState = this.props.editorState
+				.transform()
+				.insertText(' ')
+				.extend(-1)
+				.wrapInline({
+					type: A,
+					data: { 
+						href: '',
+						isPortal: false
+					}
+				})
+				.collapseToEnd()
+				.focus()
+				.apply()
 
-			}
-		}	
-	}
+			this.props.onChange(newState)
+		}
+	}	
+
 
 	onHrefChange = e => {
 		this.setState({ href: e.target.value })
@@ -97,10 +103,10 @@ class Button extends Component {
 
 	render() {
 		const { editorState } = this.props
-
 		const hasLinks = editorState.inlines.some(
 			(inline: any) => inline.type === A
 		)
+
 		return (
 			<MuiThemeProvider muiTheme={getMuiTheme()}>
 				<span>
@@ -148,7 +154,7 @@ export default class LinkPlugin extends Plugin {
 		}
 		switch (object.type) {
 			case A:
-				return <newlink href={object.data.get('href')}>{children}</newlink>
+				return <newlink href={object.data.get('href')}>{object.data.get('title')}</newlink>
 		}
 	}
 }
