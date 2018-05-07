@@ -29,8 +29,7 @@ const sampleChildren = createStateForLayoutPlugin({
       ]
     }
   ],
-	initialState: { title: "spoiler" }
-	
+  initialState: { title: 'spoiler' }
 })
 
 storiesOf('Spoiler', module)
@@ -45,8 +44,8 @@ storiesOf('Spoiler', module)
     const content = sampleChildren
 
     return renderEditable(content)
-	})
-	.add('Renderer (w/ children)', () => {
+  })
+  .add('Renderer (w/ children)', () => {
     const content = sampleChildren
 
     return renderHTMLRenderer(content)
