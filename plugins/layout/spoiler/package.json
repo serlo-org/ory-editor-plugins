@@ -1,5 +1,5 @@
 {
-  "name": "ory-editor-plugins-spoiler",
+  "name": "@serlo-org/ory-editor-plugins-spoiler",
   "version": "0.0.0",
   "main": "./lib/index.js",
   "scripts": {
@@ -53,3 +53,4 @@
     "rimraf": "^2.5.4"
   }
 }
+
