@@ -8,7 +8,7 @@ import {
 } from '../../../../.storybook/helpers'
 import plugin from '.'
 
-storiesOf('Markdown', module)
+storiesOf('Markdown Table', module)
   .add('Editable (initial state)', () => {
     const content = createStateForContentPlugin({ plugin })
 

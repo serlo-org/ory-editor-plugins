@@ -1,12 +1,12 @@
 import InfoIcon from 'material-ui-icons/Code'
 import React from 'react'
 
-import MarkdownPlugin from './Component'
+import MarkdownTablePlugin from './Component'
 import plugin from './plugin'
 
 export default {
   ...plugin,
-  Component: MarkdownPlugin,
+  Component: MarkdownTablePlugin,
   IconComponent: <InfoIcon />,
-  text: 'Code Highlight'
+  text: 'Markdown Table'
 }

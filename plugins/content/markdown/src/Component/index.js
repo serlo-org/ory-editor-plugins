@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Display from './render'
 import Form from './form'
 
-export default class MarkdownPlugin extends Component {
+export default class MarkdownTablePlugin extends Component {
   onChange(event) {
     const value = event.target.value
 

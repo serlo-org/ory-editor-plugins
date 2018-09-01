@@ -1,1 +1,1 @@
-# ory-editor-plugins-markdown
+# ory-editor-plugins-markdown-table
