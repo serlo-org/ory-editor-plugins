@@ -34,12 +34,24 @@ import '@serlo-org/ory-editor-plugins-highlight/src/index.css'
 import geogebra from '@serlo-org/ory-editor-plugins-geogebra/src'
 import geogebraRender from '@serlo-org/ory-editor-plugins-geogebra/src/index.render'
 import '@serlo-org/ory-editor-plugins-geogebra/src/index.css'
+import markdown from '@serlo-org/ory-editor-plugins-markdown-table/src'
+import markdownRender from '@serlo-org/ory-editor-plugins-markdown-table/src/index.render'
+import '@serlo-org/ory-editor-plugins-markdown-table/src/index.css'
 
 require('react-tap-event-plugin')() // react-tap-event-plugin is required by material-ui which is used by ory-editor-ui so we need to call it here
 
 // Define which plugins we want to use. We only have slate and parallax available, so load those.
 const editorPlugins = {
-  content: [slate(), spacer, image, video, divider, geogebra, highlight],
+  content: [
+    slate(),
+    spacer,
+    image,
+    video,
+    divider,
+    geogebra,
+    highlight,
+    markdown
+  ],
   layout: [
     infobox({ defaultPlugin: slate() }),
     spoiler({ defaultPlugin: slate() })
@@ -54,7 +66,8 @@ const renderPlugins = {
     video,
     divider,
     geogebraRender,
-    highlightRender
+    highlightRender,
+    markdownRender
   ],
   layout: [
     infoboxRender({ defaultPlugin: slate() }),

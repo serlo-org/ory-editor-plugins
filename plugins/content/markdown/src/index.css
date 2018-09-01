@@ -1,0 +1,25 @@
+tr {
+    border-top: 1px solid #c6cbd1;
+    background: #fff;
+}
+
+th,
+td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+table tr:nth-child(2n) {
+    background: #f6f8fa;
+}
+
+.ory-editor-markdown-form {
+    margin-top: 10px;
+}
+
+.ory-editor-markdown-textarea {
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+}
