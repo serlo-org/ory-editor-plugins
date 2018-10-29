@@ -20,7 +20,7 @@ const Form = props => (
             label="Geogebra ID"
             placeholder="1221221"
             onChange={handleChange(props.onChange)}
-            value={props.src}
+            value={props.state.src}
           />
         )
       : null}
