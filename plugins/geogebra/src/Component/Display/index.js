@@ -50,7 +50,7 @@ class Display extends Component {
     })
 
     request
-      .post('http://www.geogebra.org/api/json.php')
+      .post('https://www.geogebra.org/api/json.php')
       .send(geogebraRequest)
       .end((err, res) => {
         if (this.mounted && !err && res.ok) {
