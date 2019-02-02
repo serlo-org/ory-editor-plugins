@@ -3,6 +3,9 @@ import { blockquoteRendererPlugin } from '@serlo/editor-plugin-blockquote-render
 import { equationsRendererPlugin } from '@serlo/editor-plugin-equations-renderer'
 import { geogebraRendererPlugin } from '@serlo/editor-plugin-geogebra-renderer'
 import { h5pRendererPlugin } from '@serlo/editor-plugin-h5p-renderer'
+import { heHeadingRendererPlugin } from '@serlo/editor-plugin-he-heading-renderer'
+import { heMarkdownRendererPlugin } from '@serlo/editor-plugin-he-markdown-renderer'
+import { heTitleRendererPlugin } from '@serlo/editor-plugin-he-title-renderer'
 import { highlightRendererPlugin } from '@serlo/editor-plugin-highlight-renderer'
 import { hintRendererPlugin } from '@serlo/editor-plugin-hint-renderer'
 import { createImageRendererPlugin } from '@serlo/editor-plugin-image-renderer'
@@ -30,6 +33,9 @@ const registry: RendererPluginRegistry = {
   [Plugin.Equations]: equationsRendererPlugin,
   [Plugin.Geogebra]: geogebraRendererPlugin,
   [Plugin.H5p]: h5pRendererPlugin,
+  [Plugin.HeTitle]: heTitleRendererPlugin,
+  [Plugin.HeMarkdown]: heMarkdownRendererPlugin,
+  [Plugin.HeHeading]: heHeadingRendererPlugin,
   [Plugin.Highlight]: highlightRendererPlugin,
   [Plugin.Hint]: hintRendererPlugin,
   [Plugin.Image]: imageRendererPlugin,

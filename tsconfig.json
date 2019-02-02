@@ -28,6 +28,18 @@
       "@serlo/editor-plugin-geogebra-renderer": [
         "plugins/geogebra-renderer/src"
       ],
+      "@serlo/editor-plugin-he-heading": ["plugins/he-heading/src"],
+      "@serlo/editor-plugin-he-heading-renderer": [
+        "plugins/he-heading-renderer/src"
+      ],
+      "@serlo/editor-plugin-he-markdown": ["plugins/he-markdown/src"],
+      "@serlo/editor-plugin-he-markdown-renderer": [
+        "plugins/he-markdown-renderer/src"
+      ],
+      "@serlo/editor-plugin-he-title": ["plugins/he-title/src"],
+      "@serlo/editor-plugin-he-title-renderer": [
+        "plugins/he-title-renderer/src"
+      ],
       "@serlo/editor-plugin-highlight": ["plugins/highlight/src"],
       "@serlo/editor-plugin-highlight-renderer": [
         "plugins/highlight-renderer/src"

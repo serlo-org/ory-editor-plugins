@@ -25,7 +25,6 @@ storiesOf('Hint', module)
         content: createDocumentIdentifier()
       }
     })
-
     return renderEditor(content)
   })
 

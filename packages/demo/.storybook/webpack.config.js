@@ -37,6 +37,18 @@ module.exports = (_baseConfig, _env, defaultConfig) => {
               '@serlo/editor-plugin-h5p': '@serlo/editor-plugin-h5p/src',
               '@serlo/editor-plugin-h5p-renderer':
                 '@serlo/editor-plugin-h5p-renderer/src',
+              '@serlo/editor-plugin-he-heading':
+                '@serlo/editor-plugin-he-heading/src',
+              '@serlo/editor-plugin-he-heading-renderer':
+                '@serlo/editor-plugin-he-heading-renderer/src',
+              '@serlo/editor-plugin-he-markdown':
+                '@serlo/editor-plugin-he-markdown/src',
+              '@serlo/editor-plugin-he-markdown-renderer':
+                '@serlo/editor-plugin-he-markdown-renderer/src',
+              '@serlo/editor-plugin-he-title':
+                '@serlo/editor-plugin-he-title/src',
+              '@serlo/editor-plugin-he-title-renderer':
+                '@serlo/editor-plugin-he-title-renderer/src',
               '@serlo/editor-plugin-highlight':
                 '@serlo/editor-plugin-highlight/src',
               '@serlo/editor-plugin-highlight-renderer':

@@ -37,7 +37,10 @@
     "@serlo/editor-plugin-step-by-step-renderer": "^0.5.0",
     "@serlo/editor-plugin-table-renderer": "^0.5.0",
     "@serlo/editor-plugin-text-renderer": "^0.5.0",
-    "@serlo/editor-plugins-registry": "^0.5.0"
+    "@serlo/editor-plugins-registry": "^0.5.0",
+    "@serlo/editor-plugin-he-heading-renderer": "0.1.0",
+    "@serlo/editor-plugin-he-markdown-renderer": "0.1.0",
+    "@serlo/editor-plugin-he-title-renderer": "0.1.0"
   },
   "publishConfig": {
     "access": "public"

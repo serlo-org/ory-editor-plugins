@@ -37,7 +37,10 @@
     "@serlo/editor-plugin-step-by-step": "^0.5.0",
     "@serlo/editor-plugin-table": "^0.5.0",
     "@serlo/editor-plugin-text": "^0.5.0",
-    "@serlo/editor-plugins-registry": "^0.5.0"
+    "@serlo/editor-plugins-registry": "^0.5.0",
+    "@serlo/editor-plugin-he-heading": "0.1.0",
+    "@serlo/editor-plugin-he-markdown": "0.1.0",
+    "@serlo/editor-plugin-he-title": "0.1.0"
   },
   "publishConfig": {
     "access": "public"

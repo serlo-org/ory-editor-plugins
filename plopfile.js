@@ -1,5 +1,5 @@
 module.exports = function(plop) {
-  plop.addHelper(
+  plop.setPartial(
     'prettierCommand',
     () =>
       'prettier --write \\"{{__tests__,src}/**/*,*}.{js,jsx,ts,tsx,css,scss,sass,less,json,md,markdown,yaml,yml}\\"'

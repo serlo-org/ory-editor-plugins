@@ -1,0 +1,104 @@
+{
+  "id": "8fba0dde-b9e7-4c48-bea5-5fa85d325915",
+  "cells": [
+    {
+      "id": "8fba0dde-b9e7-4c48-bea5-5fa85d325916",
+      "content": {
+        "plugin": {
+          "name": "@serlo/editor-plugin-he-heading",
+          "version": "0.1.0"
+        },
+        "state": {
+          "caption": {
+            "type": "@splish-me/editor-core/editable",
+            "state": {
+              "id": "03861178-ea7d-4afb-a86c-ec8b848e1cd3",
+              "cells": [
+                {
+                  "id": "03861178-ea7d-4afb-a86c-ec8b848e1cd4",
+                  "content": {
+                    "plugin": {
+                      "name": "@serlo/editor-plugin-he-title",
+                      "version": "0.1.0"
+                    },
+                    "state": {
+                      "content": "Hello World"
+                    }
+                  },
+                  "rows": null
+                }
+              ]
+            }
+          },
+          "content": [
+            {
+              "type": "@splish-me/editor-core/editable",
+              "state": {
+                "id": "eddc1f06-dbaf-4b74-b6c3-dd375b6c029c",
+                "cells": [
+                  {
+                    "id": "eddc1f06-dbaf-4b74-b6c3-dd375b6c029d",
+                    "content": {
+                      "plugin": {
+                        "name": "@serlo/editor-plugin-he-heading",
+                        "version": "0.1.0"
+                      },
+                      "state": {
+                        "caption": {
+                          "type": "@splish-me/editor-core/editable",
+                          "state": {
+                            "id": "9e9112a0-28b0-4f5c-ba02-1350682ce323",
+                            "cells": [
+                              {
+                                "id": "9e9112a0-28b0-4f5c-ba02-1350682ce324",
+                                "content": {
+                                  "plugin": {
+                                    "name": "@serlo/editor-plugin-he-title",
+                                    "version": "0.1.0"
+                                  },
+                                  "state": {
+                                    "content": "Subheading"
+                                  }
+                                },
+                                "rows": null
+                              }
+                            ]
+                          }
+                        },
+                        "content": [
+                          {
+                            "type": "@splish-me/editor-core/editable",
+                            "state": {
+                              "id": "b8386e57-9cbf-4216-8001-1026ed546823",
+                              "cells": [
+                                {
+                                  "id": "b8386e57-9cbf-4216-8001-1026ed546824",
+                                  "content": {
+                                    "plugin": {
+                                      "name": "@serlo/editor-plugin-he-markdown",
+                                      "version": "0.1.0"
+                                    },
+                                    "state": {
+                                      "content": "Document content"
+                                    }
+                                  },
+                                  "rows": null
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "rows": null
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "rows": null
+    }
+  ]
+}

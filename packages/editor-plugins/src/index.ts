@@ -3,6 +3,9 @@ import { blockquotePlugin } from '@serlo/editor-plugin-blockquote'
 import { equationsPlugin } from '@serlo/editor-plugin-equations'
 import { geogebraPlugin } from '@serlo/editor-plugin-geogebra'
 import { h5pPlugin } from '@serlo/editor-plugin-h5p'
+import { heHeadingPlugin } from '@serlo/editor-plugin-he-heading'
+import { heMarkdownPlugin } from '@serlo/editor-plugin-he-markdown'
+import { heTitlePlugin } from '@serlo/editor-plugin-he-title'
 import { highlightPlugin } from '@serlo/editor-plugin-highlight'
 import { hintPlugin } from '@serlo/editor-plugin-hint'
 import { injectionPlugin } from '@serlo/editor-plugin-injection'
@@ -43,6 +46,9 @@ const registry: EditorPluginRegistry = {
   [Plugin.Equations]: equationsPlugin,
   [Plugin.Geogebra]: geogebraPlugin,
   [Plugin.H5p]: h5pPlugin,
+  [Plugin.HeTitle]: heTitlePlugin,
+  [Plugin.HeMarkdown]: heMarkdownPlugin,
+  [Plugin.HeHeading]: heHeadingPlugin,
   [Plugin.Highlight]: highlightPlugin,
   [Plugin.Hint]: hintPlugin,
   [Plugin.Image]: imagePlugin,

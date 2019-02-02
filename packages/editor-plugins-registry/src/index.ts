@@ -7,6 +7,9 @@ export enum Plugin {
   Equations = '@serlo-org/equations',
   Geogebra = '@serlo-org/geogebra',
   H5p = '@serlo-org/h5p',
+  HeTitle = '@serlo/editor-plugin-he-title',
+  HeMarkdown = '@serlo/editor-plugin-he-markdown',
+  HeHeading = '@serlo/editor-plugin-he-heading',
   Highlight = '@serlo-org/highlight',
   Hint = '@serlo-org/hint',
   Image = '@splish-me/image',
@@ -19,7 +22,7 @@ export enum Plugin {
   Spoiler = '@serlo-org/spoiler',
   StepByStep = '@serlo-org/step-by-step',
   Table = '@serlo-org/table',
-  Text = '@splish-me/slate'
+  Text = '@splish-me/slate',
 }
 
 const defaultPlugins = [
@@ -35,6 +38,11 @@ const defaultPlugins = [
 ]
 
 const newPlugins = [
+  Plugin.HeTitle,
+
+  Plugin.HeMarkdown,
+
+  Plugin.HeHeading,
   Plugin.Highlight,
   Plugin.Equations,
   Plugin.InputExercise,
